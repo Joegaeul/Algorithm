@@ -14,7 +14,7 @@ public class Main {
             if(arr[i]>now) {
                 now = arr[i];
             }
-            if(count==now){
+            if(count>=now){
                 groupNum++;
                 now = 0;
                 count=0;
