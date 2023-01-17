@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        sc.nextLine();
+        sc.nextLine(); // 정수형 입력받은 후에 문자열 한줄을 처리할려면 버퍼를 비워줘야함 
         String[] s = sc.nextLine().split(" ");
         int x=1, y=1;
 
