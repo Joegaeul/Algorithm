@@ -19,12 +19,17 @@ public class Main {
         Arrays.sort(a); // 오름차순 정렬
         Arrays.sort(b, Collections.reverseOrder()); // 내림차순 정렬
 
-        // a와 b배열 앞쪽 3개 교체
-        for(int i=0;i<3;i++){
-            a[i] = b[i];
+        for(int i=0;i<K;i++){
+            if(a[i]<b[i]){
+                int temp = a[i];
+                a[i] = b[i];
+                b[i] = temp;
+            }
+            // a의 원소가 b의 원소보다 크거나 같을 때, 반복문 탈출
+            else break;
         }
 
-        int sum = 0;
+        long sum = 0;
         for(int num : a)
             sum += num;
 
